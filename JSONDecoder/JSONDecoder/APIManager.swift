@@ -16,7 +16,7 @@ class APIManager{
         self.url = url
     }
     
-    func downloadJSONFromURL(onSucess: @escaping(Post)->Void, onFailure: @escaping(Error) -> Void){
+    func downloadJSONFromURL(onSucess: @escaping(Post) -> Void, onFailure: @escaping(Error) -> Void){
         
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             if error == nil{
